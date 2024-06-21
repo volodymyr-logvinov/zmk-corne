@@ -7,9 +7,30 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/keys.h>
+
 // #include <keys_ua.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        right_bracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <10 9>;
+        };
+
+        left_bracket {
+            bindings = <&kp LBKT>;
+            key-positions = <8 9>;
+        };
+
+        back_slash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <21 22>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -69,10 +90,10 @@
 
         ua_layer {
             bindings = <
-&trans  &kp Q  &trans  &trans        &trans  &trans       &trans   &trans  &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans        &trans  &trans       &trans   &trans  &trans    &trans  &trans  &trans
-&trans  &trans  &trans  &trans        &trans  &trans       &trans   &trans  &trans    &trans  &trans  &trans
-                        &kp LEFT_GUI  &mo 1   &kt SPACE    &kt RET  &mo 2   &kp RALT
+&trans  &kp Q   &trans  &trans        &trans  &trans       &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS  &kp SLASH
+&trans  &trans  &trans  &trans        &trans  &trans       &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS   &kp ASTERISK
+&trans  &trans  &trans  &trans        &trans  &trans       &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT    &trans
+                        &kp LEFT_GUI  &mo 1   &kt SPACE    &kt RET          &mo 2            &kp RALT
             >;
         };
     };
