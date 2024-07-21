@@ -29,6 +29,22 @@
             bindings = <&kp BACKSLASH>;
             key-positions = <21 22>;
         };
+
+        left_par {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <3 4>;
+            layers = <0>;
+        };
+
+        left_brace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <15 16>;
+        };
+
+        right_shift {
+            bindings = <&kp RIGHT_SHIFT>;
+            key-positions = <34 33>;
+        };
     };
 
     keymap {
